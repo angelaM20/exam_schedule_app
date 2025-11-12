@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'screens/exam_list_screen.dart';
+
+void main() {
+  runApp(const ExamScheduleApp());
+}
+
+class ExamScheduleApp extends StatelessWidget {
+  const ExamScheduleApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Распоред за испити',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green),
+        useMaterial3: true,
+      ),
+      home: ExamListScreen(),
+    );
+  }
+}
